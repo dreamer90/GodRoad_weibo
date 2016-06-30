@@ -74,7 +74,7 @@ class MainTabBarViewController: UITabBarController {
     btn.setBackgroundImage(UIImage(named:"tabbar_compose_button_highlighted"), forState: UIControlState.Highlighted)
         
         btn.addTarget(self, action: #selector(MainTabBarViewController.composeBtnClick), forControlEvents: UIControlEvents.TouchUpInside)
-        
+        btn.sizeToFit()
         return btn
     }()
     

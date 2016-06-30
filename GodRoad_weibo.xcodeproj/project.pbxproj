@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37805D8F1D24B21900968A16 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37805D8E1D24B21900968A16 /* VisitorView.swift */; };
 		378B9CA11D23A47B00424C04 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B9CA01D23A47B00424C04 /* BaseTableViewController.swift */; };
 		378B9CA31D23A4CF00424C04 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B9CA21D23A4CF00424C04 /* MainTabBarViewController.swift */; };
 		378B9CA51D23A59A00424C04 /* EssenceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B9CA41D23A59A00424C04 /* EssenceTableViewController.swift */; };
@@ -14,6 +15,7 @@
 		378B9CA91D23A63500424C04 /* InfomationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B9CA81D23A63500424C04 /* InfomationTableViewController.swift */; };
 		378B9CAB1D23A64000424C04 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B9CAA1D23A64000424C04 /* MyTableViewController.swift */; };
 		378B9CAE1D23AE3B00424C04 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B9CAD1D23AE3B00424C04 /* AddArticleViewController.swift */; };
+		37CCCDC91D24EA6200C14968 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CCCDC81D24EA6200C14968 /* UIView+AutoLayout.swift */; };
 		6C86023E5D7BED737275B64B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 480B59E61658D96FB91DA8FB /* libPods.a */; };
 		8463059F1D22BB67003F4E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463059E1D22BB67003F4E1A /* AppDelegate.swift */; };
 		846305A11D22BB67003F4E1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846305A01D22BB67003F4E1A /* ViewController.swift */; };
@@ -43,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		23A7D3060EEEC3409E356576 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		37805D8E1D24B21900968A16 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		378B9CA01D23A47B00424C04 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		378B9CA21D23A4CF00424C04 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		378B9CA41D23A59A00424C04 /* EssenceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EssenceTableViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		378B9CA81D23A63500424C04 /* InfomationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfomationTableViewController.swift; sourceTree = "<group>"; };
 		378B9CAA1D23A64000424C04 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		378B9CAD1D23AE3B00424C04 /* AddArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
+		37CCCDC81D24EA6200C14968 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		480B59E61658D96FB91DA8FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463059B1D22BB66003F4E1A /* GodRoad_weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GodRoad_weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463059E1D22BB67003F4E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		378B9C971D23A3AA00424C04 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				37CCCDC71D24EA5000C14968 /* Tools */,
 				378B9CAC1D23AE0800424C04 /* AddArticle */,
 				378B9C9F1D23A44500424C04 /* Other */,
 				378B9C981D23A3AA00424C04 /* Discover */,
@@ -175,6 +180,7 @@
 			children = (
 				378B9CA01D23A47B00424C04 /* BaseTableViewController.swift */,
 				378B9CA21D23A4CF00424C04 /* MainTabBarViewController.swift */,
+				37805D8E1D24B21900968A16 /* VisitorView.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -185,6 +191,14 @@
 				378B9CAD1D23AE3B00424C04 /* AddArticleViewController.swift */,
 			);
 			path = AddArticle;
+			sourceTree = "<group>";
+		};
+		37CCCDC71D24EA5000C14968 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				37CCCDC81D24EA6200C14968 /* UIView+AutoLayout.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		846305921D22BB66003F4E1A = {
@@ -439,7 +453,9 @@
 				378B9CAB1D23A64000424C04 /* MyTableViewController.swift in Sources */,
 				846305A11D22BB67003F4E1A /* ViewController.swift in Sources */,
 				378B9CA91D23A63500424C04 /* InfomationTableViewController.swift in Sources */,
+				37805D8F1D24B21900968A16 /* VisitorView.swift in Sources */,
 				378B9CA71D23A62600424C04 /* DiscoverTableViewController.swift in Sources */,
+				37CCCDC91D24EA6200C14968 /* UIView+AutoLayout.swift in Sources */,
 				8463059F1D22BB67003F4E1A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
