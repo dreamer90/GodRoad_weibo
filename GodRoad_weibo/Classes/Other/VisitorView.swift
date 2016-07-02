@@ -140,6 +140,19 @@ class VisitorView: UIView {
         return btn
     }()
     
+    func loginBtnWillClick() {
+        if delegate != nil{
+            delegate?.loginBtnWillClick()
+        }
+    }
+    
+    
+    func registerBtnWillClick() {
+        if delegate != nil{
+            delegate?.registerBtnWillClick()
+        }
+    }
+    
     //蒙板
     private lazy var maskBGView:UIImageView = {
         let iv = UIImageView(image: UIImage(named:"visitordiscover_feed_mask_smallicon"))

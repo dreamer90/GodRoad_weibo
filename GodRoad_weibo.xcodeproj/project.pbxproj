@@ -24,6 +24,12 @@
 		846305A91D22BB67003F4E1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846305A71D22BB67003F4E1A /* LaunchScreen.storyboard */; };
 		846305B41D22BB67003F4E1A /* GodRoad_weiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846305B31D22BB67003F4E1A /* GodRoad_weiboTests.swift */; };
 		846305BF1D22BB67003F4E1A /* GodRoad_weiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846305BE1D22BB67003F4E1A /* GodRoad_weiboUITests.swift */; };
+		84B869FF1D28003A00ABAAFF /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B869FE1D28003A00ABAAFF /* OAuthViewController.swift */; };
+		84B86A051D280A3700ABAAFF /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B86A041D280A3700ABAAFF /* NetworkTools.swift */; };
+		84B86A071D280C5000ABAAFF /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B86A061D280C5000ABAAFF /* UserAccount.swift */; };
+		84B86A091D280E2E00ABAAFF /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B86A081D280E2E00ABAAFF /* String+Category.swift */; };
+		84B86A0B1D2810CA00ABAAFF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B86A0A1D2810CA00ABAAFF /* WelcomeViewController.swift */; };
+		84B86A0D1D2810DB00ABAAFF /* NewfeatureCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B86A0C1D2810DB00ABAAFF /* NewfeatureCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,13 @@
 		846305BA1D22BB67003F4E1A /* GodRoad_weiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GodRoad_weiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846305BE1D22BB67003F4E1A /* GodRoad_weiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodRoad_weiboUITests.swift; sourceTree = "<group>"; };
 		846305C01D22BB67003F4E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B869FE1D28003A00ABAAFF /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		84B86A031D28054800ABAAFF /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		84B86A041D280A3700ABAAFF /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		84B86A061D280C5000ABAAFF /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		84B86A081D280E2E00ABAAFF /* String+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
+		84B86A0A1D2810CA00ABAAFF /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		84B86A0C1D2810DB00ABAAFF /* NewfeatureCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewfeatureCollectionViewController.swift; sourceTree = "<group>"; };
 		CA6569EC0B763D251A1B982B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,13 +121,16 @@
 		378B9C971D23A3AA00424C04 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				37CCCDC71D24EA5000C14968 /* Tools */,
-				378B9CAC1D23AE0800424C04 /* AddArticle */,
-				378B9C9F1D23A44500424C04 /* Other */,
 				378B9C981D23A3AA00424C04 /* Discover */,
 				378B9C991D23A3AA00424C04 /* Essence */,
 				378B9C9D1D23A3AA00424C04 /* Infomation */,
 				378B9C9E1D23A3AA00424C04 /* My */,
+				378B9C9F1D23A44500424C04 /* Mian */,
+				84B869FB1D28001400ABAAFF /* Common */,
+				84B869FC1D28001400ABAAFF /* Newfeature */,
+				84B869FD1D28001400ABAAFF /* OAuth */,
+				37CCCDC71D24EA5000C14968 /* Tools */,
+				378B9CAC1D23AE0800424C04 /* AddArticle */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -175,13 +191,14 @@
 			path = My;
 			sourceTree = "<group>";
 		};
-		378B9C9F1D23A44500424C04 /* Other */ = {
+		378B9C9F1D23A44500424C04 /* Mian */ = {
 			isa = PBXGroup;
 			children = (
 				378B9CA01D23A47B00424C04 /* BaseTableViewController.swift */,
 				378B9CA21D23A4CF00424C04 /* MainTabBarViewController.swift */,
 				37805D8E1D24B21900968A16 /* VisitorView.swift */,
 			);
+			name = Mian;
 			path = Other;
 			sourceTree = "<group>";
 		};
@@ -196,7 +213,9 @@
 		37CCCDC71D24EA5000C14968 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				84B86A081D280E2E00ABAAFF /* String+Category.swift */,
 				37CCCDC81D24EA6200C14968 /* UIView+AutoLayout.swift */,
+				84B86A041D280A3700ABAAFF /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -253,6 +272,32 @@
 				846305C01D22BB67003F4E1A /* Info.plist */,
 			);
 			path = GodRoad_weiboUITests;
+			sourceTree = "<group>";
+		};
+		84B869FB1D28001400ABAAFF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				84B86A031D28054800ABAAFF /* Bridging-Header.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		84B869FC1D28001400ABAAFF /* Newfeature */ = {
+			isa = PBXGroup;
+			children = (
+				84B86A0A1D2810CA00ABAAFF /* WelcomeViewController.swift */,
+				84B86A0C1D2810DB00ABAAFF /* NewfeatureCollectionViewController.swift */,
+			);
+			path = Newfeature;
+			sourceTree = "<group>";
+		};
+		84B869FD1D28001400ABAAFF /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				84B869FE1D28003A00ABAAFF /* OAuthViewController.swift */,
+				84B86A061D280C5000ABAAFF /* UserAccount.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		BEAFBF8CDEF6E7252A40788B /* Pods */ = {
@@ -447,15 +492,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				378B9CA11D23A47B00424C04 /* BaseTableViewController.swift in Sources */,
+				84B86A0B1D2810CA00ABAAFF /* WelcomeViewController.swift in Sources */,
 				378B9CA51D23A59A00424C04 /* EssenceTableViewController.swift in Sources */,
 				378B9CAE1D23AE3B00424C04 /* AddArticleViewController.swift in Sources */,
 				378B9CA31D23A4CF00424C04 /* MainTabBarViewController.swift in Sources */,
+				84B869FF1D28003A00ABAAFF /* OAuthViewController.swift in Sources */,
+				84B86A0D1D2810DB00ABAAFF /* NewfeatureCollectionViewController.swift in Sources */,
 				378B9CAB1D23A64000424C04 /* MyTableViewController.swift in Sources */,
+				84B86A071D280C5000ABAAFF /* UserAccount.swift in Sources */,
 				846305A11D22BB67003F4E1A /* ViewController.swift in Sources */,
 				378B9CA91D23A63500424C04 /* InfomationTableViewController.swift in Sources */,
 				37805D8F1D24B21900968A16 /* VisitorView.swift in Sources */,
 				378B9CA71D23A62600424C04 /* DiscoverTableViewController.swift in Sources */,
 				37CCCDC91D24EA6200C14968 /* UIView+AutoLayout.swift in Sources */,
+				84B86A091D280E2E00ABAAFF /* String+Category.swift in Sources */,
+				84B86A051D280A3700ABAAFF /* NetworkTools.swift in Sources */,
 				8463059F1D22BB67003F4E1A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +603,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -590,6 +642,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -604,6 +657,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dddeam.GodRoad-weibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/litaibai/Desktop/GodRoad_weibo/GodRoad_weibo/Classes/Common/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -617,6 +671,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dddeam.GodRoad-weibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/litaibai/Desktop/GodRoad_weibo/GodRoad_weibo/Classes/Common/Bridging-Header.h";
 			};
 			name = Release;
 		};
