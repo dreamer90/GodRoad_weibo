@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-
-
 class OAuthViewController: UIViewController {
 
     let WB_App_Key = "1487522231"
@@ -118,7 +115,7 @@ extension OAuthViewController: UIWebViewDelegate
                 {
                     account!.saveAccount()
                     // 去欢迎界面
-//                    NSNotificationCenter.defaultCenter().postNotificationName(XMGSwitchRootViewControllerKey, object: false)
+                    NSNotificationCenter.defaultCenter().postNotificationName(XMGSwitchRootViewControllerKey, object: false)
                     return
                 }
                 

@@ -657,7 +657,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dddeam.GodRoad-weibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/litaibai/Desktop/GodRoad_weibo/GodRoad_weibo/Classes/Common/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hyfsoft/Desktop/GodRoad_weibo/GodRoad_weibo/Classes/Common/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -671,7 +671,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dddeam.GodRoad-weibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/litaibai/Desktop/GodRoad_weibo/GodRoad_weibo/Classes/Common/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hyfsoft/Desktop/GodRoad_weibo/GodRoad_weibo/Classes/Common/Bridging-Header.h";
 			};
 			name = Release;
 		};

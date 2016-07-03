@@ -16,7 +16,7 @@ class BaseTableViewController: UITableViewController,VisitorViewDelegate
     }
  
     // 判断用户是否登陆
-    var userLogin = false
+    var userLogin = UserAccount.userLogin()
     // 定义属性保存未登录界面
     var visitorView:VisitorView?
     
