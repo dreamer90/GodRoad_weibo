@@ -10,14 +10,69 @@ import UIKit
 
 class EssenceTableViewController: BaseTableViewController {
 
+    //保存微博数组
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.whiteColor()
+        // 1.如果没有登录, 就设置未登录界面的信息
+        if !userLogin{
         
-        visitorView?.setupVisitorInfo(true, imageName: "visitordiscover_feed_image_house", message: "关注一些人，回这里看看有什么惊喜")
+            visitorView?.setupVisitorInfo(true, imageName: "visitordiscover_feed_image_house", message: "关注一些人，回这里看看有什么惊喜")
+            return
+        }
+        
+        // 2.初始化导航条
+        setupNav()
     }
 
+    /**
+     初始化导航条
+     */
+    private func setupNav(){
+        // 1.初始化左右按钮
+        navigationItem.leftBarButtonItem = UIBarButtonItem.creatBarButtonItem("navigationbar_friendattention", target: self, action: #selector(EssenceTableViewController.leftItemClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.creatBarButtonItem("navigationbar_pop", target: self, action: #selector(EssenceTableViewController.rightItemClick))
+        
+        // 2.初始化标题按钮
+        let titleBtn = TitleButton()
+        titleBtn.setTitle("凯撒大帝", forState: UIControlState.Normal)
+        titleBtn.addTarget(self, action: #selector(EssenceTableViewController.titleBtnClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        navigationItem.titleView = titleBtn
+    }
+    
+    func titleBtnClick(btn: TitleButton)
+    {
+        // 2.弹出菜单
+        let sb = UIStoryboard(name: "PopoverViewController", bundle: nil)
+        let vc = sb.instantiateInitialViewController()
+        // 2.1设置专场动画
+        vc?.transitioningDelegate = popverAnimator
+        // 2.2设置转场样式
+        vc?.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        presentViewController(vc!, animated: true, completion: nil)
+    }
+    
+    func leftItemClick()
+    {
+        print(#function)
+    }
+    
+    func rightItemClick()
+    {
+        
+    }
+    // MARK: - 懒加载
+    // 一定要定义一个属性来报错自定义转场对象, 否则会报错
+    private lazy var popverAnimator:PopoverAnimator = {
+        let pa = PopoverAnimator()
+        pa.presentFrame = CGRect(x: 100, y: 56, width: 200, height: 350)
+        return pa
+    }()
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
