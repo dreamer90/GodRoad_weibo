@@ -10,7 +10,14 @@ import UIKit
 
 class EssenceTableViewController: BaseTableViewController {
 
-    //保存微博数组
+    /// 保存微博数组
+    var statuses: [Status]?
+        {
+        didSet{
+            // 当别人设置完毕数据, 就刷新表格
+            tableView.reloadData()
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -26,6 +33,12 @@ class EssenceTableViewController: BaseTableViewController {
         
         // 2.初始化导航条
         setupNav()
+        
+        // 3.添加下拉刷新控件
+
+        
+        // 4.加载数据
+        loadData()
     }
 
     /**
@@ -63,8 +76,59 @@ class EssenceTableViewController: BaseTableViewController {
     
     func rightItemClick()
     {
-        
+        print(#function)
     }
+    
+    /// 定义变量记录当前是上拉还是下拉
+    var pullupRefreshFlag = false
+    /**
+     获取微博数据
+     如果想调用一个私有的方法:
+     1.去掉private
+     2.@objc, 当做OC方法来处理
+     */
+     @objc private func loadData(){
+        
+        // 1.默认当做下拉处理
+        var since_id = statuses?.first?.id ?? 0
+        
+        var max_id = 0
+        // 2.判断是否是上拉
+        if pullupRefreshFlag
+        {
+            since_id = 0
+            max_id = statuses?.last?.id ?? 0
+        }
+        
+        Status.loadStatuses(since_id, max_id: max_id) { (models, error) -> () in
+            
+            // 接收刷新
+            self.refreshControl?.endRefreshing()
+            
+            if error != nil
+            {
+                return
+            }
+            // 下拉刷新
+            if since_id > 0
+            {
+                // 如果是下拉刷新, 就将获取到的数据, 拼接在原有数据的前面
+                self.statuses = models! + self.statuses!
+                
+                // 显示刷新提醒
+//                self.showNewStatusCount(models?.count ?? 0)
+            }else if max_id > 0
+            {
+                // 如果是上拉加载更多, 就将获取到的数据, 拼接在原有数据的后面
+                self.statuses = self.statuses! + models!
+            }
+            else
+            {
+                self.statuses = models
+            }
+        }
+    }
+    
     // MARK: - 懒加载
     // 一定要定义一个属性来报错自定义转场对象, 否则会报错
     private lazy var popverAnimator:PopoverAnimator = {
@@ -89,60 +153,5 @@ class EssenceTableViewController: BaseTableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
