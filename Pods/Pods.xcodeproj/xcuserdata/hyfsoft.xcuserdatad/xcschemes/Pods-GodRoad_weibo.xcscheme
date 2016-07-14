@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E46B5FCD2C57BE5262419080'
-               BlueprintName = 'SVProgressHUD'
+               BlueprintIdentifier = '96C07367491B5C4E5C4B133F777D4EC8'
+               BlueprintName = 'Pods-GodRoad_weibo'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSVProgressHUD.a'>
+               BuildableName = 'libPods-GodRoad_weibo.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

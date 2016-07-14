@@ -15,6 +15,12 @@
 		378B9CA91D23A63500424C04 /* InfomationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B9CA81D23A63500424C04 /* InfomationTableViewController.swift */; };
 		378B9CAB1D23A64000424C04 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B9CAA1D23A64000424C04 /* MyTableViewController.swift */; };
 		378B9CAE1D23AE3B00424C04 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B9CAD1D23AE3B00424C04 /* AddArticleViewController.swift */; };
+		378FB3041D37338500AF80CE /* StatusesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FB3031D37338500AF80CE /* StatusesTableViewCell.swift */; };
+		378FB3061D3734CA00AF80CE /* StatusTableViewTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FB3051D3734CA00AF80CE /* StatusTableViewTopView.swift */; };
+		378FB3091D37358300AF80CE /* UIButton+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FB3071D37358300AF80CE /* UIButton+Category.swift */; };
+		378FB30A1D37358300AF80CE /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FB3081D37358300AF80CE /* UILabel+Category.swift */; };
+		378FB30C1D37372600AF80CE /* StatusPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FB30B1D37372600AF80CE /* StatusPictureView.swift */; };
+		378FB30E1D37399B00AF80CE /* StatusTableViewBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378FB30D1D37399B00AF80CE /* StatusTableViewBottomView.swift */; };
 		37A7D7CD1D2F4138006C5F67 /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7D7CC1D2F4138006C5F67 /* UIBarButtonItem+Category.swift */; };
 		37A7D7CF1D2F4875006C5F67 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7D7CE1D2F4875006C5F67 /* TitleButton.swift */; };
 		37A7D7D41D2F577F006C5F67 /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A7D7D31D2F577F006C5F67 /* PopoverViewController.storyboard */; };
@@ -28,7 +34,7 @@
 		37B4038A1D34911500B3A91C /* UIColor+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B403891D34911500B3A91C /* UIColor+Category.swift */; };
 		37B4038C1D34950D00B3A91C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4038B1D34950D00B3A91C /* User.swift */; };
 		37CCCDC91D24EA6200C14968 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CCCDC81D24EA6200C14968 /* UIView+AutoLayout.swift */; };
-		6C86023E5D7BED737275B64B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 480B59E61658D96FB91DA8FB /* libPods.a */; };
+		7A3AB6F0A7A87FD035E8B5A5 /* libPods-GodRoad_weibo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A93F617855F00E83CDCCADC /* libPods-GodRoad_weibo.a */; };
 		8463059F1D22BB67003F4E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463059E1D22BB67003F4E1A /* AppDelegate.swift */; };
 		846305A11D22BB67003F4E1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846305A01D22BB67003F4E1A /* ViewController.swift */; };
 		846305A41D22BB67003F4E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846305A21D22BB67003F4E1A /* Main.storyboard */; };
@@ -62,7 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23A7D3060EEEC3409E356576 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1532B56A22B6155C52C0E1E4 /* Pods-GodRoad_weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodRoad_weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GodRoad_weibo/Pods-GodRoad_weibo.release.xcconfig"; sourceTree = "<group>"; };
 		37805D8E1D24B21900968A16 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		378B9CA01D23A47B00424C04 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		378B9CA21D23A4CF00424C04 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +77,12 @@
 		378B9CA81D23A63500424C04 /* InfomationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfomationTableViewController.swift; sourceTree = "<group>"; };
 		378B9CAA1D23A64000424C04 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		378B9CAD1D23AE3B00424C04 /* AddArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
+		378FB3031D37338500AF80CE /* StatusesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusesTableViewCell.swift; sourceTree = "<group>"; };
+		378FB3051D3734CA00AF80CE /* StatusTableViewTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewTopView.swift; sourceTree = "<group>"; };
+		378FB3071D37358300AF80CE /* UIButton+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Category.swift"; sourceTree = "<group>"; };
+		378FB3081D37358300AF80CE /* UILabel+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
+		378FB30B1D37372600AF80CE /* StatusPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusPictureView.swift; sourceTree = "<group>"; };
+		378FB30D1D37399B00AF80CE /* StatusTableViewBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewBottomView.swift; sourceTree = "<group>"; };
 		37A7D7CC1D2F4138006C5F67 /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 		37A7D7CE1D2F4875006C5F67 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		37A7D7D31D2F577F006C5F67 /* PopoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
@@ -84,7 +96,8 @@
 		37B403891D34911500B3A91C /* UIColor+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Category.swift"; sourceTree = "<group>"; };
 		37B4038B1D34950D00B3A91C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		37CCCDC81D24EA6200C14968 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
-		480B59E61658D96FB91DA8FB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A93F617855F00E83CDCCADC /* libPods-GodRoad_weibo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GodRoad_weibo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3BC9CDAFB1AC4A05E4224A /* Pods-GodRoad_weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GodRoad_weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GodRoad_weibo/Pods-GodRoad_weibo.debug.xcconfig"; sourceTree = "<group>"; };
 		8463059B1D22BB66003F4E1A /* GodRoad_weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GodRoad_weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463059E1D22BB67003F4E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846305A01D22BB67003F4E1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +118,6 @@
 		84B86A081D280E2E00ABAAFF /* String+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
 		84B86A0A1D2810CA00ABAAFF /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		84B86A0C1D2810DB00ABAAFF /* NewfeatureCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewfeatureCollectionViewController.swift; sourceTree = "<group>"; };
-		CA6569EC0B763D251A1B982B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C86023E5D7BED737275B64B /* libPods.a in Frameworks */,
+				7A3AB6F0A7A87FD035E8B5A5 /* libPods-GodRoad_weibo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,10 +146,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CF6CA84F7DD6EFBA03E8C86 /* Frameworks */ = {
+		24D94ED5E7093624E92C047F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				480B59E61658D96FB91DA8FB /* libPods.a */,
+				6A93F617855F00E83CDCCADC /* libPods-GodRoad_weibo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,8 +185,6 @@
 				37B403841D348F8B00B3A91C /* Tool */,
 				37A7D7D01D2F4EC5006C5F67 /* Popover */,
 				378B9C9A1D23A3AA00424C04 /* Controller */,
-				378B9C9B1D23A3AA00424C04 /* Model */,
-				378B9C9C1D23A3AA00424C04 /* View */,
 			);
 			path = Essence;
 			sourceTree = "<group>";
@@ -183,24 +193,14 @@
 			isa = PBXGroup;
 			children = (
 				378B9CA41D23A59A00424C04 /* EssenceTableViewController.swift */,
-				37B403801D348DA700B3A91C /* HomeRefreshControl.swift */,
 				37B403821D348E0C00B3A91C /* HomeRefreshView.xib */,
+				37B403801D348DA700B3A91C /* HomeRefreshControl.swift */,
+				378FB3031D37338500AF80CE /* StatusesTableViewCell.swift */,
+				378FB3051D3734CA00AF80CE /* StatusTableViewTopView.swift */,
+				378FB30B1D37372600AF80CE /* StatusPictureView.swift */,
+				378FB30D1D37399B00AF80CE /* StatusTableViewBottomView.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		378B9C9B1D23A3AA00424C04 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		378B9C9C1D23A3AA00424C04 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		378B9C9D1D23A3AA00424C04 /* Infomation */ = {
@@ -261,6 +261,8 @@
 		37CCCDC71D24EA5000C14968 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				378FB3071D37358300AF80CE /* UIButton+Category.swift */,
+				378FB3081D37358300AF80CE /* UILabel+Category.swift */,
 				37B403891D34911500B3A91C /* UIColor+Category.swift */,
 				37B403871D34910A00B3A91C /* NSDate+Category.swift */,
 				84B86A081D280E2E00ABAAFF /* String+Category.swift */,
@@ -270,6 +272,15 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		628D9D1FC7C1CFC23E61B649 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E3BC9CDAFB1AC4A05E4224A /* Pods-GodRoad_weibo.debug.xcconfig */,
+				1532B56A22B6155C52C0E1E4 /* Pods-GodRoad_weibo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		846305921D22BB66003F4E1A = {
 			isa = PBXGroup;
 			children = (
@@ -277,8 +288,8 @@
 				846305B21D22BB67003F4E1A /* GodRoad_weiboTests */,
 				846305BD1D22BB67003F4E1A /* GodRoad_weiboUITests */,
 				8463059C1D22BB66003F4E1A /* Products */,
-				BEAFBF8CDEF6E7252A40788B /* Pods */,
-				2CF6CA84F7DD6EFBA03E8C86 /* Frameworks */,
+				628D9D1FC7C1CFC23E61B649 /* Pods */,
+				24D94ED5E7093624E92C047F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -352,15 +363,6 @@
 			path = OAuth;
 			sourceTree = "<group>";
 		};
-		BEAFBF8CDEF6E7252A40788B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CA6569EC0B763D251A1B982B /* Pods.debug.xcconfig */,
-				23A7D3060EEEC3409E356576 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,12 +370,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846305C31D22BB67003F4E1A /* Build configuration list for PBXNativeTarget "GodRoad_weibo" */;
 			buildPhases = (
-				337B6799101EE6AC0C070695 /* Check Pods Manifest.lock */,
+				FD58E7C0C5177129D6641218 /* 📦 Check Pods Manifest.lock */,
 				846305971D22BB66003F4E1A /* Sources */,
 				846305981D22BB66003F4E1A /* Frameworks */,
 				846305991D22BB66003F4E1A /* Resources */,
-				911FEBC3A509A2A11A562E8E /* Embed Pods Frameworks */,
-				F640F2B39C100A5A24D6E82C /* Copy Pods Resources */,
+				C22A0B035C74AF636529D37E /* 📦 Embed Pods Frameworks */,
+				09C900E155C0D77D0007A882 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -493,49 +495,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		337B6799101EE6AC0C070695 /* Check Pods Manifest.lock */ = {
+		09C900E155C0D77D0007A882 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GodRoad_weibo/Pods-GodRoad_weibo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C22A0B035C74AF636529D37E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GodRoad_weibo/Pods-GodRoad_weibo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD58E7C0C5177129D6641218 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		911FEBC3A509A2A11A562E8E /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F640F2B39C100A5A24D6E82C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -546,6 +548,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A7D7EC1D2F8221006C5F67 /* PopverAnimator.swift in Sources */,
+				378FB30A1D37358300AF80CE /* UILabel+Category.swift in Sources */,
+				378FB3091D37358300AF80CE /* UIButton+Category.swift in Sources */,
 				37A7D7EE1D2F846D006C5F67 /* PopoverPresentationController.swift in Sources */,
 				37B403811D348DA700B3A91C /* HomeRefreshControl.swift in Sources */,
 				378B9CA11D23A47B00424C04 /* BaseTableViewController.swift in Sources */,
@@ -556,12 +560,16 @@
 				378B9CA31D23A4CF00424C04 /* MainTabBarViewController.swift in Sources */,
 				84B869FF1D28003A00ABAAFF /* OAuthViewController.swift in Sources */,
 				84B86A0D1D2810DB00ABAAFF /* NewfeatureCollectionViewController.swift in Sources */,
+				378FB30C1D37372600AF80CE /* StatusPictureView.swift in Sources */,
 				378B9CAB1D23A64000424C04 /* MyTableViewController.swift in Sources */,
 				37B403861D348FC400B3A91C /* Status.swift in Sources */,
 				37A7D7CD1D2F4138006C5F67 /* UIBarButtonItem+Category.swift in Sources */,
+				378FB3061D3734CA00AF80CE /* StatusTableViewTopView.swift in Sources */,
 				84B86A071D280C5000ABAAFF /* UserAccount.swift in Sources */,
+				378FB30E1D37399B00AF80CE /* StatusTableViewBottomView.swift in Sources */,
 				37A7D7CF1D2F4875006C5F67 /* TitleButton.swift in Sources */,
 				37B4038A1D34911500B3A91C /* UIColor+Category.swift in Sources */,
+				378FB3041D37338500AF80CE /* StatusesTableViewCell.swift in Sources */,
 				846305A11D22BB67003F4E1A /* ViewController.swift in Sources */,
 				37A7D7D61D2F5AC8006C5F67 /* PopoverViewController.swift in Sources */,
 				378B9CA91D23A63500424C04 /* InfomationTableViewController.swift in Sources */,
@@ -713,7 +721,7 @@
 		};
 		846305C41D22BB67003F4E1A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA6569EC0B763D251A1B982B /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 6E3BC9CDAFB1AC4A05E4224A /* Pods-GodRoad_weibo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GodRoad_weibo/Info.plist;
@@ -727,7 +735,7 @@
 		};
 		846305C51D22BB67003F4E1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23A7D3060EEEC3409E356576 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 1532B56A22B6155C52C0E1E4 /* Pods-GodRoad_weibo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GodRoad_weibo/Info.plist;

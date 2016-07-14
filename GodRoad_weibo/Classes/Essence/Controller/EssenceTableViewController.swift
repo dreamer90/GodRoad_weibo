@@ -137,21 +137,65 @@ class EssenceTableViewController: BaseTableViewController {
         return pa
     }()
     
+    /// 刷新提醒控件
+    private lazy var newStatusLabel: UILabel =
+        {
+            let label = UILabel()
+            let height: CGFloat = 44
+            
+            label.frame =  CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: height)
+            
+            label.backgroundColor = UIColor.orangeColor()
+            label.textColor = UIColor.whiteColor()
+            label.textAlignment = NSTextAlignment.Center
+            
+            // 加载 navBar 上面，不会随着 tableView 一起滚动
+            self.navigationController?.navigationBar.insertSubview(label, atIndex: 0)
+            
+            label.hidden = true
+            return label
+    }()
+    
+    /// 微博行高的缓存, 利用字典作为容器. key就是微博的id, 值就是对应微博的行高
+    var rowCache: [Int: CGFloat] = [Int: CGFloat]()
+    
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // 清空缓存
+        rowCache.removeAll()
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
 }
+
+extension EssenceTableViewController
+{
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statuses?.count ?? 0
+    }
+    
+    // 返回行高
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        // 1.取出对应行的模型
+        let status = statuses![indexPath.row]
+        
+        // 2.判断缓存中有没有
+        if let height = rowCache[status.id]
+        {
+            return height
+        }
+        
+        // 3.拿到cell
+        let cell = tableView.dequeueReusableCellWithIdentifier(StatusTableViewCellIdentifier.cellID(status)) as! StatusTableViewCell
+        
+        // 4.拿到对应行的行高
+        let rowHeight = cell.rowHeight(status)
+        
+        // 5.缓存行高
+        rowCache[status.id] = rowHeight
+        
+        // 6.返回行高
+        return rowHeight
+    }
+}
+
+
+
+
