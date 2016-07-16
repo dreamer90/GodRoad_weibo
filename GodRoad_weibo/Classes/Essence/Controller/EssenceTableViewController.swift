@@ -34,10 +34,17 @@ class EssenceTableViewController: BaseTableViewController {
         // 2.初始化导航条
         setupNav()
         
-        // 3.添加下拉刷新控件
+        // 3.注册两个cell
+        tableView.registerClass(StatusNormalTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.NormalCell.rawValue)
+        tableView.registerClass(StatusForwardTableViewCell.self, forCellReuseIdentifier: StatusTableViewCellIdentifier.ForwardCell.rawValue)
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        // 4.添加下拉刷新控件
+        refreshControl = HomeRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(EssenceTableViewController.loadData), forControlEvents: UIControlEvents.ValueChanged)
 
         
-        // 4.加载数据
+        // 5.加载数据
         loadData()
     }
 
@@ -193,6 +200,28 @@ extension EssenceTableViewController
         
         // 6.返回行高
         return rowHeight
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let status = statuses![indexPath.row]
+        // 1.获取cell
+        let cell = tableView.dequeueReusableCellWithIdentifier(StatusTableViewCellIdentifier.cellID(status), forIndexPath: indexPath) as! StatusTableViewCell
+        // 2.设置数据
+        cell.status = status
+        
+        
+        // 4.判断是否滚动到了最后一个cell
+        let count = statuses?.count ?? 0
+        if indexPath.row == (count - 1)
+        {
+            pullupRefreshFlag = true
+            //            print("上拉加载更多")
+            loadData()
+        }
+        
+        // 3.返回cell
+        return cell
     }
 }
 
